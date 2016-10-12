@@ -3,19 +3,28 @@
 simplest run
 
 ```
-$ docker run -p "8080:80" -ti lkwg82/h2o-http2-server
+$ docker run -p "8080:80" -ti south37/h2o-http2-demo-server
 ```
 
 test with
 
 ```
 $ curl http://localhost:8080/
-not found
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to H2O</title>
+  </head>
+  <body>
+    <p>Welcome to H2O - an optimized HTTP server</p>
+    <p>It works!</p>
+  </body>
+</html>
 ```
 
 For more information, please refer to the documentation at [h2o.examp1e.net](https://h2o.examp1e.net/).
 
-Docker image is available at [https://hub.docker.com/r/lkwg82/h2o-http2-server](https://hub.docker.com/r/lkwg82/h2o-http2-server).
+Docker image is available at [https://hub.docker.com/r/south37/h2o-http2-demo-server/](https://hub.docker.com/r/south37/h2o-http2-demo-server/).
 
 
 # Task
@@ -28,7 +37,7 @@ $ docker run \
   -p "80:80" \
   -v "$(pwd)/0_hello/h2o":/etc/h2o \
   -v "$(pwd)/0_hello/public":/var/www \
-  -ti lkwg82/h2o-http2-server
+  -ti south37/h2o-http2-demo-server
 ```
 
 ## 1. HTTPS
@@ -40,7 +49,7 @@ $ docker run \
   -p "443:443" \
   -v "$(pwd)/1_ssl/h2o":/etc/h2o \
   -v "$(pwd)/1_ssl/public":/var/www \
-  -ti lkwg82/h2o-http2-server
+  -ti south37/h2o-http2-demo-server
 ```
 
 ## 2. Multiplexing
@@ -52,7 +61,7 @@ $ docker run \
   -p "443:443" \
   -v "$(pwd)/2_multiplexing/h2o":/etc/h2o \
   -v "$(pwd)/2_multiplexing/public":/var/www \
-  -ti lkwg82/h2o-http2-server
+  -ti south37/h2o-http2-demo-server
 ```
 
 ## 3. Server Push
@@ -64,5 +73,5 @@ $ docker run \
   -p "443:443" \
   -v "$(pwd)/3_push/h2o":/etc/h2o \
   -v "$(pwd)/3_push/public":/var/www \
-  -ti lkwg82/h2o-http2-server
+  -ti south37/h2o-http2-demo-server
 ```
