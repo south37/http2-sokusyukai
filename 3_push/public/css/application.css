@@ -1,0 +1,7 @@
+.gopher-picture {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap:         wrap;
+  width: 480px;
+}
