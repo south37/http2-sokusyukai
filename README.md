@@ -54,7 +54,7 @@ $ docker run \
 
 ## 2. Multiplexing
 Open http://127.0.0.1 and https://127.0.0.1 .
-Latency will is set to 200ms.
+Latency is set to 200ms.
 
 ```
 $ docker run \
