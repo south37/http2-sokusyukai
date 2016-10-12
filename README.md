@@ -40,7 +40,9 @@ $ docker run \
   -ti south37/h2o-http2-demo-server
 ```
 
-## 1. HTTPS
+cf. https://h2o.examp1e.net/configure/quick_start.html
+
+## 1. HTTPS(HTTP/2)
 Open http://127.0.0.1 and https://127.0.0.1 .
 
 ```
@@ -51,6 +53,8 @@ $ docker run \
   -v "$(pwd)/1_ssl/public":/var/www \
   -ti south37/h2o-http2-demo-server
 ```
+
+cf. https://h2o.examp1e.net/configure/base_directives.html#listen
 
 ## 2. Multiplexing
 Open http://127.0.0.1 and https://127.0.0.1 .
@@ -67,6 +71,8 @@ $ docker run \
   /bin/sh -c "tc qdisc add dev eth0 root netem delay 200ms && h2o"
 ```
 
+cf. https://h2o.examp1e.net/configure/http2_directives.html
+
 ## 3. Server Push
 Open https://127.0.0.1 .
 
@@ -78,3 +84,10 @@ $ docker run \
   -v "$(pwd)/3_push/public":/var/www \
   -ti south37/h2o-http2-demo-server
 ```
+
+cf. https://h2o.examp1e.net/configure/http2_directives.html#server-push
+
+cf. https://h2o.examp1e.net/configure/http2_directives.html#http2-casper
+
+## 4. Reverse Proxy
+cf. https://h2o.examp1e.net/configure/proxy_directives.html
