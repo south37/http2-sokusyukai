@@ -42,3 +42,15 @@ $ docker run \
   -v "$(pwd)/1_ssl/public":/var/www \
   -ti lkwg82/h2o-http2-server
 ```
+
+## 2. Multiplexing
+Open http://127.0.0.1 and https://127.0.0.1 .
+
+```
+$ docker run \
+  -p "80:80" \
+  -p "443:443" \
+  -v "$(pwd)/2_multiplexing/h2o":/etc/h2o \
+  -v "$(pwd)/2_multiplexing/public":/var/www \
+  -ti lkwg82/h2o-http2-server
+```
