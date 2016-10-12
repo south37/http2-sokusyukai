@@ -12,7 +12,8 @@ RUN set -x && \
     echo "gpgcheck=0"                                                                        >> /etc/yum.repos.d/bintray-tatsushid-h2o-rpm.repo && \
     echo "repo_gpgcheck=0"                                                                   >> /etc/yum.repos.d/bintray-tatsushid-h2o-rpm.repo && \
     echo "enabled=1"                                                                         >> /etc/yum.repos.d/bintray-tatsushid-h2o-rpm.repo && \
-    yum install -y h2o
+    yum install -y h2o && \
+    yum install -y iproute
 
 WORKDIR /etc/h2o
 EXPOSE 80 443
