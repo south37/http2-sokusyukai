@@ -54,14 +54,17 @@ $ docker run \
 
 ## 2. Multiplexing
 Open http://127.0.0.1 and https://127.0.0.1 .
+Latency will is set to 200ms.
 
 ```
 $ docker run \
+  --cap-add=NET_ADMIN \
   -p "80:80" \
   -p "443:443" \
   -v "$(pwd)/2_multiplexing/h2o":/etc/h2o \
   -v "$(pwd)/2_multiplexing/public":/var/www \
-  -ti south37/h2o-http2-demo-server
+  -ti south37/h2o-http2-demo-server \
+  /bin/sh -c "tc qdisc add dev eth0 root netem delay 200ms && h2o"
 ```
 
 ## 3. Server Push
