@@ -102,5 +102,16 @@ cf. https://h2o.examp1e.net/configure/http2_directives.html#server-push
 
 cf. https://h2o.examp1e.net/configure/http2_directives.html#http2-casper
 
-## 4. Reverse Proxy
-cf. https://h2o.examp1e.net/configure/proxy_directives.html
+## And More
+- Reverse Proxy
+  - cf. https://h2o.examp1e.net/configure/proxy_directives.html
+- Number of threads
+  - cf. https://h2o.examp1e.net/configure/base_directives.html#num-threads
+- Number of connections
+  - cf. https://h2o.examp1e.net/configure/base_directives.html#max-connections
+- SSL Session Resumption
+  - cf. https://h2o.examp1e.net/configure/base_directives.html#ssl-session-resumption
+- Send compressed file
+  - cf. https://h2o.examp1e.net/configure/file_directives.html#file.send-compressed
+- etc...
+  - cf. https://h2o.examp1e.net/configure.html
