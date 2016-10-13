@@ -78,11 +78,13 @@ Open https://127.0.0.1 .
 
 ```
 $ docker run \
+  --cap-add=NET_ADMIN \
   -p "80:80" \
   -p "443:443" \
   -v "$(pwd)/3_push/h2o":/etc/h2o \
   -v "$(pwd)/3_push/public":/var/www \
-  -ti south37/h2o-http2-demo-server
+  -ti south37/h2o-http2-demo-server \
+  /bin/sh -c "tc qdisc add dev eth0 root netem delay 200ms && h2o"
 ```
 
 cf. https://h2o.examp1e.net/configure/http2_directives.html#server-push
