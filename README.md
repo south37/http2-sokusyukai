@@ -59,7 +59,7 @@ cf. https://h2o.examp1e.net/configure/base_directives.html#listen
 ## 2. Multiplexing
 Open http://127.0.0.1 and https://127.0.0.1 .
 
-Also open http://127.0.0.1/multiple_assets and https://127.0.0.1/multiple_assets .
+Open http://127.0.0.1/multiple_assets and https://127.0.0.1/multiple_assets .
 
 Latency is set to 200ms.
 
