@@ -32,6 +32,8 @@ Docker image is available at [https://hub.docker.com/r/south37/h2o-http2-demo-se
 ## 0. Hello World
 Open http://127.0.0.1
 
+Configuration file is https://github.com/south37/http2-sokusyukai/blob/master/0_hello/h2o/h2o.conf
+
 ```
 $ docker run \
   -p "80:80" \
@@ -44,6 +46,8 @@ cf. https://h2o.examp1e.net/configure/quick_start.html
 
 ## 1. HTTPS(HTTP/2)
 Open http://127.0.0.1 and https://127.0.0.1 .
+
+Configuration file is https://github.com/south37/http2-sokusyukai/blob/master/1_ssl/h2o/h2o.conf
 
 ```
 $ docker run \
@@ -63,6 +67,8 @@ Open http://127.0.0.1/multiple_assets and https://127.0.0.1/multiple_assets .
 
 Latency is set to 200ms.
 
+Configuration file is https://github.com/south37/http2-sokusyukai/blob/master/2_multiplexing/h2o/h2o.conf
+
 ```
 $ docker run \
   --cap-add=NET_ADMIN \
@@ -78,6 +84,8 @@ cf. https://h2o.examp1e.net/configure/http2_directives.html
 
 ## 3. Server Push
 Open https://127.0.0.1 .
+
+Configuration file is https://github.com/south37/http2-sokusyukai/blob/master/3_push/h2o/h2o.conf
 
 ```
 $ docker run \
